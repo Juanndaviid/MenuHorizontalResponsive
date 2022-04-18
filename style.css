@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+.collasep {
+    display: none;
+}
+
+
+/* Menu  color y estilo*/
+nav { 
+    background-color: black;
+    color: white;
+    width: 100%;
+
+}
+
+/* Estilo para la version Movil */
+nav .mobile {
+    display: none;
+}
+
+/* Diseño para el menu de forma responsivo */
+nav .mobile .hearder{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+}
+
+/* Estilo para el botton */
+nav .mobile .hearder .more button{
+    border: none;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+}
+nav .mobile .hearder .more button:hover{
+    color: black;
+    background-color: rgb(79, 197, 0);
+}
+
+
+nav .logo {
+    min-width: 250px;
+}
+
+/* Estilo para los hipervinculos */
+nav a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 20px 25px;
+}
+
+/* Cuando se coloque el mouse arriba del texto */
+nav a:hover {
+    color: black;
+    background-color: rgb(79, 197, 0);
+}
+
+/* Estilos para version de escritorio */
+nav .desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pad: 0 20px;
+
+}
+
+nav .desktop .Primarios, 
+nav .desktop .Secundarios {
+    display: flex;
+} 
+
+nav .desktop .Secundarios.Mini {
+    display: none;
+}
+
+/* Para los responsio de la web */
+@media  screen and (max-width: 977px){
+nav .logo {
+    min-width: 100px;
+    }
+
+nav .Secundarios.Completo {
+    display: none;
+}
+nav .Secundarios.Mini{
+    display: block !important;
+}
+
+nav .Secundarios.Mini .submenu{
+    background-color: rgb(172, 69, 0);
+    position: absolute;
+    display: none;
+    width: 150px;
+    right: 0;
+}
+
+nav .Secundarios.Mini:hover .submenu {
+    display:block;
+}
+}
+
+/* Para los responsio movil */
+@media  screen and (max-width: 500px) {
+    nav .desktop{
+    display: none;
+    }
+    nav .mobile{
+    display: block;
+    }
+}

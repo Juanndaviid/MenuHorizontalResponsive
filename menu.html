@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Vertical responsivo</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="mobile">
+            <div class="hearder">
+                <div class="logo"></div>
+                <div class="more"><button id="Bmore"><span class="material-icons">menu</span></button></div>
+            </div>
+            <div id="links" class="links ">
+                <a href="#">Inicio</a>
+                <a href="#">Nosotros</a>
+                <a href="#">Servicios</a>
+                <a href="#">Contacto</a>
+                <a href="#">Buscar</a>
+                <a href="#">Sign Up</a>
+                <a href="#">Login</a>
+            </div>
+        </div>
+
+        <div class="desktop">
+        <div class="logo">Logo</div>
+        
+        <div class="Primarios">
+            <a href="#">Inicio</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
+        </div>
+
+        <div class="Secundarios Completo">
+            <a href="#">Buscar</a>
+            <a href="#">Sign Up</a>
+            <a href="#">Login</a>
+        </div>
+        <div class="Secundarios Mini">
+            <a href="#" class="more">More</a>
+            <div class="submenu">
+            <a href="#">Buscar</a>
+            <a href="#">Sign Up</a>
+            <a href="#">Login</a>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <script>
+        const Bmore = document.querySelector('#Bmore');
+        const links = document.querySelector('#links');
+
+        Bmore.addEventListener("click", (e) => {
+            links.classList.toggle('collasep');
+        });
+    </script>
+</body>
+</html>
